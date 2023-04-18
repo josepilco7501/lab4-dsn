@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lista de clientes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Clientes</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for (var i = 0; i < clientes.length; i++) { %>
+        <tr>
+          <td><%= clientes[i].id %></td>
+          <td><%= clientes[i].nombre %></td>
+          <td><%= clientes[i].email %></td>
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+</body>
+</html>
