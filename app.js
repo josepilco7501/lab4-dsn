@@ -38,10 +38,12 @@ app.get('/productos', (req, res) => {
     res.render('../views/productos.ejs', {productos: results});
   });
 });  
+*/
 
 // Iniciamos el servidor en el puerto 9000
 app.listen(9000, () => {
   console.log('Servidor iniciado en el puerto 9000');
 });
 
-*/
+
+
