@@ -7,7 +7,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 const connection = mysql.createConnection({
-  host     : 'localhost',
+  host     : '192.168.0.12',
   user     : 'root',
   password : 'atrellusx',
   database : 'lab3_dsn',
@@ -39,7 +39,7 @@ app.get('/productos', (req, res) => {
   });
 });  
 
-// Iniciamos el servidor en el puerto 3000
-app.listen(3000, () => {
-  console.log('Servidor iniciado en el puerto 3000');
+// Iniciamos el servidor en el puerto 9000
+app.listen(9000, () => {
+  console.log('Servidor iniciado en el puerto 9000');
 });
