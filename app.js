@@ -14,7 +14,7 @@ const connection = mysql.createConnection({
   insecureAuth: true
 });
 
-connection.connect();
+//connection.connect();
 
 app.get('/', (req, res) => {
   res.send('¡Hola, mundo!');
