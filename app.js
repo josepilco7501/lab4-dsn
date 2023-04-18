@@ -6,15 +6,15 @@ const mysql = require('mysql');
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-/*const connection = mysql.createConnection({
+const connection = mysql.createConnection({
   host     : '192.168.0.12',
   user     : 'root',
   password : 'atrellusx',
   database : 'lab3_dsn',
   insecureAuth: true
-}); */
+}); 
 
-//connection.connect();
+connection.connect();
 
 app.get('/', (req, res) => {
   res.send('¡Hola, mundo!');
