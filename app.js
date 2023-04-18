@@ -7,14 +7,13 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 const connection = mysql.createConnection({
-  host     : '192.168.0.12',
-  user     : 'root',
-  password : 'atrellusx',
-  database : 'lab3_dsn',
-  insecureAuth: true
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
 }); 
 
-//connection.connect();
+connection.connect();
 
 app.get('/', (req, res) => {
   res.send('¡Hola, mundo!');
