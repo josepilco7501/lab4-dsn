@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
   res.send('¡Hola, mundo!');
 });
 
-
+/*
 // Creamos una ruta para mostrar la lista de clientes
 app.get('/clientes', (req, res) => {
 
@@ -43,3 +43,5 @@ app.get('/productos', (req, res) => {
 app.listen(9000, () => {
   console.log('Servidor iniciado en el puerto 9000');
 });
+
+*/
