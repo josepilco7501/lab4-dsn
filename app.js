@@ -13,13 +13,13 @@ const connection = mysql.createConnection({
   database: process.env.DB_NAME
 }); 
 
-connection.connect();
+//connection.connect();
 
 app.get('/', (req, res) => {
   res.send('¡Hola, mundo!');
 });
 
-/*
+
 // Creamos una ruta para mostrar la lista de clientes
 app.get('/clientes', (req, res) => {
 
@@ -37,7 +37,7 @@ app.get('/productos', (req, res) => {
     res.render('../views/productos.ejs', {productos: results});
   });
 });  
-*/
+
 
 // Iniciamos el servidor en el puerto 9000
 app.listen(9000, () => {
