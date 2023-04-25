@@ -6,14 +6,17 @@ const mysql = require('mysql');
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-const connection = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME
-}); 
+const clientes = [
+  {id: 1, nombre: 'Juan'},
+  {id: 2, nombre: 'María'},
+  {id: 3, nombre: 'Pedro'}
+];
 
-//connection.connect();
+const productos = [
+  {id: 1, nombre: 'Producto 1', precio: 10},
+  {id: 2, nombre: 'Producto 2', precio: 20},
+  {id: 3, nombre: 'Producto 3', precio: 30}
+];
 
 app.get('/', (req, res) => {
   res.send('¡Hola, mundo!');
@@ -23,19 +26,13 @@ app.get('/', (req, res) => {
 // Creamos una ruta para mostrar la lista de clientes
 app.get('/clientes', (req, res) => {
 
-  connection.query('SELECT * FROM clientes', function(error, results, fields) {
-    if (error) throw error;
-    res.render('../views/clientes.ejs', { clientes: results });
-  });
+  res.render('../views/clientes.ejs', {clientes})
 
 });
 
 // Creamos una ruta para mostrar la lista de productos
 app.get('/productos', (req, res) => {
-  connection.query('SELECT * FROM productos', function(error, results) {
-    if (error) throw error;
-    res.render('../views/productos.ejs', {productos: results});
-  });
+  res.render('../views/productos.ejs', {productos})
 });  
 
 
