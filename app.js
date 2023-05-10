@@ -36,7 +36,7 @@ app.get('/productos', (req, res) => {
 
 
 // Iniciamos el servidor en el puerto 9000
-app.listen(3000, () => {
+app.listen(5000, () => {
   console.log('Servidor iniciado en el puerto 9000');
 });
 
